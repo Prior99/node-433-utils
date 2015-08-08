@@ -11,6 +11,7 @@
 			"libraries": ["-lwiringPi"],
 			"sources" : [
 				"src/transmitter.cc",
+				"src/receiver.cc",
 				"src/433utils.cc"
 			]
 		}

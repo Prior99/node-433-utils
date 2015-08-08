@@ -1,5 +1,5 @@
-#ifndef TRANSMITTER_H
-#define TRANSMITTER_H
+#ifndef RECEIVER_H
+#define RECEIVER_H
 
 #include <v8.h>
 #include <nan.h>
@@ -9,12 +9,14 @@
 
 #include "../deps/433Utils/RPi_utils/RCSwitch.h"
 
-class Transmitter : public node::ObjectWrap {
+class Receiver : public node::ObjectWrap {
 	public:
-		explicit Transmitter(unsigned int);
-		~Transmitter();
+		explicit Receiver(unsigned int);
+		~Receiver();
 		static NAN_METHOD(New);
-		static NAN_METHOD(Send);
+		static NAN_METHOD(available);
+		static NAN_METHOD(reset);
+		static NAN_METHOD(value);
 		RCSwitch s;
 	private:
 		unsigned int pin;
