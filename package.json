@@ -18,5 +18,9 @@
       "nan": "~1.6.2"
   },
   "author": "Frederick Gnodtke",
-  "license": "PDDL-1.0"
+  "license": "PDDL-1.0",
+  "scripts" : {
+    "preinstall" : "git submodule init",
+    "install" : "node-gyp rebuild"
+  }
 }
