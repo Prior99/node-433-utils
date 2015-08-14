@@ -20,7 +20,7 @@
   "author": "Frederick Gnodtke",
   "license": "PDDL-1.0",
   "scripts" : {
-    "preinstall" : "git submodule update --init",
+    "preinstall" : "git clone https://github.com/ninjablocks/433Utils.git deps/433Utils",
     "install" : "node-gyp rebuild"
   }
 }
